@@ -5,4 +5,4 @@ for /f "tokens=*" %%a in ('dir RobloxPlayerLauncher.exe /b /s') do set playerdir
 cd %playerdir:RobloxPlayerLauncher.exe=%
 cd content/sounds/
 del ouch.ogg
-curl -s -o https://raw.githubusercontent.com/Th3SnowyOwl/BRINGBACKTHEOOF/main/ouch.ogg
+curl -s -o ouch.ogg https://raw.githubusercontent.com/Th3SnowyOwl/BRINGBACKTHEOOF/main/ouch.ogg

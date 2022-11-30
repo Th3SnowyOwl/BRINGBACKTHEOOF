@@ -5,5 +5,10 @@ Program is now fully functional
 - Runs on Startup
 - Works with X86 and Appdata Roblox Installs
 
-# Working on
-- Custom audio system
+# Custom audio system
+- to use, download your file and convert it to .ogg
+- name the file
+```
+touse.ogg
+```
+- if your file isn't found, the default (OOF) will be downloaded.

@@ -8,6 +8,6 @@ Program is now fully functional
 # Custom audio system
 - to use, download your file and convert it to .ogg
 - name the file ```useme.ogg```
-- place it on your desktop
-- run update.bat
+- place it on your documents
+- run Update.bat
 - if your file isn't found, the default (OOF) will be downloaded.

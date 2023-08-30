@@ -23,6 +23,7 @@ if exist "%startup%\Restore_AD.bat" (goto update_AD) else (if exist "%startup%\R
 :install
 cd %localappdata%\Roblox\Versions\
 if %errorlevel% equ 1 (goto pf86) else (goto appdata)
+
 :pf86
 cd "C:\Program Files (x86)\Roblox\Versions\"
 copy "%cf%\Restore.bat" "%startup%"
@@ -32,6 +33,7 @@ move "%cf%\Restore.bat" "%homedrive%%homepath%\Documents"
 cd "%homedrive%%homepath%\Documents"
 ren Restore.bat Update.bat
 goto check
+
 :appdata
 cd %localappdata%\Roblox\Versions\
 copy "%cf%\Restore.bat" "%startup%"
@@ -42,9 +44,10 @@ cd "%homedrive%%homepath%\Documents"
 goto check
 
 :update_PF
-cd %localappdata%\Roblox\Versions\
+cd "C:\Program Files (x86)\Roblox\Versions\"
 for /f "tokens=*" %%a in ('dir RobloxPlayerLauncher.exe /b /s') do set playerdir=%%a
 goto replace
+
 :update_AD
 cd %localappdata%\Roblox\Versions\
 for /f "tokens=*" %%a in ('dir RobloxPlayerLauncher.exe /b /s') do set playerdir=%%a
@@ -56,5 +59,5 @@ del ouch.ogg
 if exist "%HOMEDRIVE%%HOMEPATH%\Documents\ouch.ogg" (copy "%HOMEDRIVE%%HOMEPATH%\Documents\ouch.ogg" "%cd%") else (goto default)
 exit
 :default
-curl -o ouch.ogg https://raw.githubusercontent.com/Th3SnowyOwl/BRINGBACKTHEOOF/main/ouch.ogg
+curl -o ouch.ogg https://raw.githubusercontent.com/Th3SnowyOwl/RESTOREOOF/main/ouch.ogg
 exit
